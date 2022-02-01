@@ -10,7 +10,7 @@ import jornada6 from "../assets/img/jornada6.jpeg";
 
 export default function Produtos() {
     return (
-        <div class="oi">
+        <div class="saudacao">
             <section class="tituloJornada" >
                 <h1>Inicie sua jornada</h1>
                 <p class=""> O momento mais feliz da vida humana, penso eu, é uma partida para terras desconhecidas.</p>
