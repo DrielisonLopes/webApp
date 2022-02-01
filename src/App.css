@@ -1,0 +1,14 @@
+body {
+    background: #99c0fbc2;
+    height: 100vh;
+}
+
+.menu {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 2rem;
+}
