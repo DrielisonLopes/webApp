@@ -1,0 +1,47 @@
+.backContato {
+    position: relative;
+    max-height: 650px;
+}
+
+.formulario {
+    width: calc(100% + 20px);
+}
+
+.contato {
+    background: #e9f2fa;
+    padding-left: 3.3rem;
+    padding: 166px;
+    position: absolute;
+    color: #000;
+    text-align: center;
+}
+
+input, textarea {
+    background-color: #e5e5e5;
+    border: none;
+    margin: 0.5rem;
+}
+
+.inputsMenores {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mensagem {
+    width: 100%;
+}
+
+button {
+    color: #ffffff;
+    background-color: #478ac9;
+    margin-left: auto;
+    width: 100%;
+    padding: 0.8rem 0;
+    border-style: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0.6rem 0;
+}
