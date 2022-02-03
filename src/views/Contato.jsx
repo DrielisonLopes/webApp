@@ -8,7 +8,7 @@ import backContato from "../assets/img/backContato.jpg"
 
 export default function Contato() {
     return (
-        <>
+        <div>
             <img class="backContato" src={backContato} />  
             <div class="contato">
                 <h2 class="">Contact Us</h2>
@@ -40,6 +40,7 @@ export default function Contato() {
                     </form>
                 </div>
             </div>
-        </>
+            <Footer></Footer>
+        </div>
     );
 }

@@ -1,6 +1,7 @@
 .backContato {
-    position: relative;
-    max-height: 650px;
+    position: absolute;
+    max-height: 685px;
+    width: 99%;
 }
 
 .formulario {
@@ -8,12 +9,14 @@
 }
 
 .contato {
-    background: #e9f2fa;
+    background: #e9f2fa52;
     padding-left: 3.3rem;
-    padding: 166px;
+    padding: 110px;
     position: absolute;
     color: #000;
     text-align: center;
+    width: 70%;
+    margin: 80px 50px;
 }
 
 input, textarea {
