@@ -32,7 +32,7 @@ input, textarea {
     width: 100%;
 }
 
-button {
+.btnEnviar {
     color: #ffffff;
     background-color: #478ac9;
     margin-left: auto;

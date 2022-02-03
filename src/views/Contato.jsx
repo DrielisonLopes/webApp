@@ -34,7 +34,7 @@ export default function Contato() {
                             <textarea placeholder="Digite sua mensagem" rows="6" cols="100" id="message-d70e" name="message" class="" required=""></textarea>
                         </div>
                         <div class="">
-                            <button>Enviar</button>
+                            <button class="btnEnviar">Enviar</button>
                         </div>
                         <div class=""> Obrigado pela mensagem! Entraremos em contato assim que possível. </div>
                     </form>
