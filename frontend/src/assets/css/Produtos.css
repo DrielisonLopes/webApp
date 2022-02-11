@@ -1,0 +1,36 @@
+.saudacao {
+    background: #e9f2fa;
+    padding-left: 3.3rem;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+.tituloJornada {
+    color: #478ac9;
+    text-align: center;
+    padding: 0.5rem;
+
+}
+
+p {
+    color: #5377b0;
+}
+
+.selectJornada {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.jornada {
+    width: 20rem;
+    height: 298px;
+    margin: 0 auto 0 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
