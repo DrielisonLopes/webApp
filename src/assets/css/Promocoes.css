@@ -44,6 +44,6 @@
 .fraseFooter {
     text-align: center;
     grid-column: span 4;
-    margin-top: 4rem;
+    margin-top: 60px;
     line-height: 2rem;
 }
