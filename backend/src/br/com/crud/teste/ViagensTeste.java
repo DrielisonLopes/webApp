@@ -8,9 +8,12 @@ public class ViagensTeste {
 
         Viagens viagens = new Viagens();
         viagens.setPartida("Salvador");
-        viagens.setDestino("Capadócia");
-        viagens.setDestino("10/04/2022");
-        viagens.setDestino("01/05/2022");
+        viagens.setDestino("Rio de Janeiro");
+        viagens.setDataIda(10042022);
+        viagens.setDataVolta(01052022);
+
+        viagens.setPassageiroId(5);
+        viagens.setPagamentoId(5);
 
         viagensdao.save(viagens);
     }

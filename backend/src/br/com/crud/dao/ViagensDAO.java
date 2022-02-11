@@ -17,7 +17,7 @@ public class ViagensDAO {
 		 * de dados
 		 */
 
-		String sql = "INSERT INTO Viagens (Partida, Destino, DataIda, DataVolta)" + "VALUES(?,?,?,?)";
+		String sql = "INSERT INTO Viagens (Partida, Destino, dataIda, dataVolta, PassageiroId, PagamentoId)" + "VALUES(?,?,?,?,?,?)";
 
 		Connection conn = null;
 		PreparedStatement pstm = null;
@@ -36,10 +36,17 @@ public class ViagensDAO {
 			pstm.setString(2, viagem.getDestino());
 
 			// Adicionar o valor do terceiro parâmetro da sql
-			pstm.setString(3, viagem.getDataIda());
+			pstm.setInt(3, viagem.getDataIda());
 
 			// Adicionar o valor do quarto parâmetro da sql
-			pstm.setString(4, viagem.getDataVolta());
+			pstm.setInt(4, viagem.getDataVolta());
+
+            // Adicionar o valor do quinto parâmetro da sql
+			pstm.setInt(5, viagem.getPassageiroId());
+
+            // Adicionar o valor do sextp parâmetro da sql
+			pstm.setInt(6, viagem.getPagamentoId());
+
 
 			// Executar a sql para inserção dos dados
 			pstm.execute();
@@ -94,7 +101,7 @@ public class ViagensDAO {
 	}
 
 	public void update(Viagens viagem) {
-		String sql = "UPDATE Viagens SET Partida = ?, Destino = ?, DataIda = ?, DataVolta = ? WHERE Id = ?";
+		String sql = "UPDATE Viagens SET Partida = ?, Destino = ?, dataIda = ?, dataVolta = ?, PassageiroId = ?, PagamentoId = ? WHERE Id = ?";
 
 		Connection conn = null;
 		PreparedStatement pstm = null;
@@ -113,13 +120,16 @@ public class ViagensDAO {
 			pstm.setString(2, viagem.getDestino());
 
             // Adicionar o valor do terceiro parâmetro da sql
-			pstm.setString(3, viagem.getDataIda());
+			pstm.setInt(3, viagem.getDataIda());
 
             // Adicionar o valor do quarto parâmetro da sql
-			pstm.setString(4, viagem.getDataVolta());
+			pstm.setInt(4, viagem.getDataVolta());
 
 			// Adicionar o valor do quinto parâmetro da sql
-			pstm.setInt(5, viagem.getId());
+			pstm.setInt(5, viagem.getPassageiroId());
+
+            // Adicionar o valor do sexto parâmetro da sql
+			pstm.setInt(6, viagem.getPagamentoId());
 
 			// Executa a sql para inserção dos dados
 			pstm.execute();
@@ -143,7 +153,7 @@ public class ViagensDAO {
 
 	public List<Viagens> getViagens() {
 
-		String sql = "SELECT * FROM Viagens";
+		String sql = "select * from Viagens as l inner join Pagamentos as a on l.PagamentoId = a.Id inner join Passageiros as e on l.PassageiroId = e.Id";
 
 		List<Viagens> viagens = new ArrayList<Viagens>();
 
@@ -174,10 +184,16 @@ public class ViagensDAO {
 				viagem.setDestino(rset.getString("Destino"));
 
                 // Recupera a data de ida do banco e atribui ele ao objeto
-				viagem.setDataIda(rset.getString("DataIda"));
+				viagem.setDataIda(rset.getInt("dataIda"));
 
                 // Recupera a data de volta do banco e atribui ele ao objeto
-				viagem.setDataVolta(rset.getString("DataVolta"));
+				viagem.setDataVolta(rset.getInt("dataVolta"));
+
+                // Recupera a data de volta do banco e atribui ele ao objeto
+				viagem.setPassageiroId(rset.getInt("PassageiroId"));
+                
+                // Recupera a data de volta do banco e atribui ele ao objeto
+				viagem.setPagamentoId(rset.getInt("PagamentoId"));
 
 				// Adiciona o contato recuperado, a lista de contatos
 				viagens.add(viagem);

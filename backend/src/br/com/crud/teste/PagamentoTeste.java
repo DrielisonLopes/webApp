@@ -7,7 +7,7 @@ public class PagamentoTeste {
         PagamentosDAO pagamentosdao = new PagamentosDAO();
 
         Pagamentos pagamentos = new Pagamentos();
-        pagamentos.setPagar("R$1000");
+        pagamentos.setPagar("R$3000");
 
         pagamentosdao.save(pagamentos);
     }

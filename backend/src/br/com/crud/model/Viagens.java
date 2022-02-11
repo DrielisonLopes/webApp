@@ -4,8 +4,8 @@ public class Viagens {
     private int id;
     private String partida;
     private String destino;
-    private String dataIda;
-    private String dataVolta;
+    private int dataIda;
+    private int dataVolta;
 
     private int PagamentoId;
     private Pagamentos pagamentos;
@@ -36,19 +36,19 @@ public class Viagens {
         this.destino = destino;
     }
 
-    public String getDataIda() {
+    public int getDataIda() {
         return dataIda;
     }
 
-    public void setDataIda(String dataIda) {
+    public void setDataIda(int dataIda) {
         this.dataIda = dataIda;
     }
 
-    public String getDataVolta() {
+    public int getDataVolta() {
         return dataVolta;
     }
 
-    public void setDataVolta(String dataVolta) {
+    public void setDataVolta(int dataVolta) {
         this.dataVolta = dataVolta;
     }
 
